@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}
+  name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}-configmap
 data: {}
 {{- end -}}
 

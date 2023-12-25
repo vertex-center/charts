@@ -21,6 +21,11 @@ spec:
           image: {{ .Values.image }}
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}-configmap
+            - secretRef:
+                name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}-secrets
 {{- end -}}
 
 {{- define "vxcommon.deployment" -}}
