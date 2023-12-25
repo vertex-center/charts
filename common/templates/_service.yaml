@@ -5,13 +5,13 @@ metadata:
   name: {{ .Chart.Name }}-service
   namespace: default
 spec:
-  type: NodePort
+  type: {{ .Values.service.type }}
   selector:
     app: {{ .Chart.Name }}
   ports:
     - protocol: TCP
       port: 8080
-      nodePort: {{ .Values.port }}
+      nodePort: {{ .Values.service.port }}
 {{- end -}}
 
 {{- define "vxcommon.service" -}}
