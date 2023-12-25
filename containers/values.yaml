@@ -1,4 +1,4 @@
 image: ghcr.io/vertex-center/vertex-containers:main
 service:
   type: LoadBalancer
-  port: 30516
+  port: 30504
