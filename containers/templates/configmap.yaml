@@ -1,0 +1,3 @@
+{{- include "vxcommon.configmap" (list . "containers.configmap") -}}
+{{- define "containers.configmap" -}}
+{{- end -}}
