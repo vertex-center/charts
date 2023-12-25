@@ -1,1 +1,2 @@
 image: ghcr.io/vertex-center/vertex-containers:main
+port: 30516
