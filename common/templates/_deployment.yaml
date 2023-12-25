@@ -1,0 +1,28 @@
+{{- define "vxcommon.deployment.tpl" -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  namespace: default
+  labels:
+    app: containers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: containers
+  template:
+    metadata:
+      labels:
+        app: containers
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image }}
+          ports:
+            - containerPort: 8080
+{{- end -}}
+
+{{- define "vxcommon.deployment" -}}
+{{- include "vxcommon.util.merge" (append . "vxcommon.deployment.tpl") -}}
+{{- end -}}

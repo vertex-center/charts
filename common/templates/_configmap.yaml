@@ -5,6 +5,7 @@ metadata:
   name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}
 data: {}
 {{- end -}}
+
 {{- define "vxcommon.configmap" -}}
 {{- include "vxcommon.util.merge" (append . "vxcommon.configmap.tpl") -}}
 {{- end -}}
