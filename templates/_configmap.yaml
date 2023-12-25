@@ -1,0 +1,10 @@
+{{- define "vertexlib.configmap.tpl" -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}
+data: {}
+{{- end -}}
+{{- define "vertexlib.configmap" -}}
+{{- include "vertexlib.util.merge" (append . "vertexlib.configmap.tpl") -}}
+{{- end -}}
