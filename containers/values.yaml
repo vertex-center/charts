@@ -2,6 +2,9 @@ image: ghcr.io/vertex-center/vertex-containers:main
 service:
   type: LoadBalancer
   port: 30504
-secrets:
-  db_user: postgres
-  db_password: postgres
+postgresql:
+  port: 5432
+  auth:
+    database: containers
+    username: vertex
+    password: vx-pg-pass

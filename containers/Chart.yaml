@@ -8,3 +8,6 @@ dependencies:
   - name: vxcommon
     version: 0.1.0
     repository: "file://../common"
+  - name: postgresql
+    version: 13.2.25
+    repository: https://charts.bitnami.com/bitnami
