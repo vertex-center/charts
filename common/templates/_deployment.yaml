@@ -2,8 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}
-  namespace: default
+  name: {{ .Release.Name }}-{{ .Chart.Name }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app: {{ .Chart.Name }}
 spec:
@@ -28,11 +28,11 @@ spec:
           envFrom:
             {{- if default false .envFromConfigMap }}
             - configMapRef:
-                name: {{ $.Chart.Name }}-configmap
+                name: {{ $.Release.Name }}-{{ $.Chart.Name }}-configmap
             {{- end }}
             {{- if default false .envFromSecrets }}
             - secretRef:
-                name: {{ $.Chart.Name }}-secrets
+                name: {{ $.Release.Name }}-{{ $.Chart.Name }}-secrets
             {{- end }}
           securityContext:
             privileged: {{ default false .privileged }}

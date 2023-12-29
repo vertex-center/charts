@@ -1,5 +1,5 @@
 containers:
-  - name: containers
+  - name: vertex-containers
     image: ghcr.io/vertex-center/vertex-containers:main
     ports:
       - in: 30504

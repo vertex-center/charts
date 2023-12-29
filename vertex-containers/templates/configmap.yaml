@@ -1,5 +1,5 @@
-{{- include "common.configmap" (list . "containers.configmap") -}}
-{{- define "containers.configmap" -}}
+{{- include "common.configmap" (list . "vertex-containers.configmap") -}}
+{{- define "vertex-containers.configmap" -}}
 data:
   VERTEX_LOGS_ADDR: $LOGS_SERVICE_HOST:$LOGS_SERVICE_PORT
   VERTEX_AUTH_ADDR: $AUTH_SERVICE_HOST:$AUTH_SERVICE_PORT
