@@ -8,5 +8,5 @@ dependencies:
 - name: dind
   repository: file://../dind
   version: 0.1.0
-digest: sha256:4929caad1682d9f4af4d76b41abb8083b22697fee2f5f61d4c0b8613d1b1bcdb
-generated: "2023-12-29T16:17:10.592491+01:00"
+digest: sha256:5568879c49c12ad9463db45ec00f29318479b9f2b5aaf09b3bbe6239a2324c45
+generated: "2023-12-29T21:07:28.348039+01:00"

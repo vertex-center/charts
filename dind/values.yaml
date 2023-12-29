@@ -1,1 +1,7 @@
-image: docker:dind
+containers:
+  - name: dind
+    image: docker:dind
+    ports:
+      - in: 2376
+        out: 2376
+    privileged: true

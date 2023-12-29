@@ -16,15 +16,27 @@ spec:
         app: {{ .Chart.Name }}
     spec:
       containers:
-        - name: {{ .Chart.Name }}
-          image: {{ .Values.image }}
+      {{- range .Values.containers }}
+        - name: {{ .name }}
+          image: {{ .image }}
           ports:
-            - containerPort: 8080
+          {{- range .ports }}
+            - containerPort: {{ .in }}
+              hostPort: {{ .out }}
+              protocol: {{ default "TCP" .protocol }}
+          {{- end }}
           envFrom:
+            {{- if default false .envFromConfigMap }}
             - configMapRef:
-                name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}-configmap
+                name: {{ $.Chart.Name }}-configmap
+            {{- end }}
+            {{- if default false .envFromSecrets }}
             - secretRef:
-                name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}-secrets
+                name: {{ $.Chart.Name }}-secrets
+            {{- end }}
+          securityContext:
+            privileged: {{ default false .privileged }}
+      {{- end }}
 {{- end -}}
 
 {{- define "common.deployment" -}}

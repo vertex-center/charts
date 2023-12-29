@@ -1,7 +1,16 @@
-image: ghcr.io/vertex-center/vertex-containers:main
+containers:
+  - name: containers
+    image: ghcr.io/vertex-center/vertex-containers:main
+    ports:
+      - in: 30504
+        out: 30504
+    envFromConfigMap: true
+    envFromSecrets: true
+
 service:
   type: LoadBalancer
   port: 30504
+
 postgresql:
   port: 5432
   auth:

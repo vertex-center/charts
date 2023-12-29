@@ -1,24 +1,3 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {{ .Chart.Name }}
-  namespace: default
-  labels:
-    app: {{ .Chart.Name }}
-spec:
-  selector:
-    matchLabels:
-      app: {{ .Chart.Name }}
-  template:
-    metadata:
-      labels:
-        app: {{ .Chart.Name }}
-    spec:
-      containers:
-        - name: {{ .Chart.Name }}
-          image: {{ .Values.image }}
-          ports:
-            - containerPort: 2376
-              hostPort: 2376
-          securityContext:
-            privileged: true
+{{- include "common.deployment" (list . "dind.deployment") -}}
+{{- define "dind.deployment" -}}
+{{- end -}}
