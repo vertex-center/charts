@@ -1,5 +1,5 @@
 apiVersion: v2
-name: vxcommon
+name: common
 description: A Vertex Helm chart template for Kubernetes
 type: library
 version: 0.1.0

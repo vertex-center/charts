@@ -1,4 +1,4 @@
-{{- include "vxcommon.configmap" (list . "containers.configmap") -}}
+{{- include "common.configmap" (list . "containers.configmap") -}}
 {{- define "containers.configmap" -}}
 data:
   VERTEX_LOGS_ADDR: $LOGS_SERVICE_HOST:$LOGS_SERVICE_PORT

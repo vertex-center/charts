@@ -1,4 +1,4 @@
-{{- define "vxcommon.deployment.tpl" -}}
+{{- define "common.deployment.tpl" -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,6 +28,6 @@ spec:
                 name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}-secrets
 {{- end -}}
 
-{{- define "vxcommon.deployment" -}}
-{{- include "vxcommon.util.merge" (append . "vxcommon.deployment.tpl") -}}
+{{- define "common.deployment" -}}
+{{- include "common.util.merge" (append . "common.deployment.tpl") -}}
 {{- end -}}

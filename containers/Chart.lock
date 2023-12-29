@@ -1,5 +1,5 @@
 dependencies:
-- name: vxcommon
+- name: common
   repository: file://../common
   version: 0.1.0
 - name: postgresql

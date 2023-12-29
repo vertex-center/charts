@@ -1,4 +1,4 @@
-{{- define "vxcommon.configmap.tpl" -}}
+{{- define "common.configmap.tpl" -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -6,6 +6,6 @@ metadata:
 data: {}
 {{- end -}}
 
-{{- define "vxcommon.configmap" -}}
-{{- include "vxcommon.util.merge" (append . "vxcommon.configmap.tpl") -}}
+{{- define "common.configmap" -}}
+{{- include "common.util.merge" (append . "common.configmap.tpl") -}}
 {{- end -}}
