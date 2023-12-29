@@ -1,0 +1,18 @@
+containers:
+  - name: vertex-logs
+    image: ghcr.io/vertex-center/vertex-logs:main
+    ports:
+      - in: 30502
+        out: 30502
+    envFromConfigMap: true
+
+service:
+  type: LoadBalancer
+  port: 30502
+
+postgresql:
+  port: 5432
+  auth:
+    database: auth
+    username: vertex
+    password: vx-pg-pass

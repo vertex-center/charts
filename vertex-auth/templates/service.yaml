@@ -1,0 +1,3 @@
+{{- include "common.service" (list . "vertex-logs.service") -}}
+{{- define "vertex-logs.service" -}}
+{{- end -}}
