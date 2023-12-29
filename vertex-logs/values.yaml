@@ -2,7 +2,7 @@ containers:
   - name: vertex-logs
     image: ghcr.io/vertex-center/vertex-logs:main
     ports:
-      - in: 30516
+      - in: 8080
         out: 30516
     envFromConfigMap: true
 

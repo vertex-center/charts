@@ -1,7 +1,7 @@
 {{- include "common.configmap" (list . "vertex-logs.configmap") -}}
 {{- define "vertex-logs.configmap" -}}
 data:
-  VERTEX_LOGS_ADDR: $LOGS_SERVICE_HOST:$LOGS_SERVICE_PORT
+  VERTEX_LOGS_ADDR: $VERTEX_LOGS_VERTEX_LOGS_SERVICE_HOST:$VERTEX_LOGS_VERTEX_LOGS_SERVICE_PORT
   VERTEX_DB_HOST: {{ .Release.Name }}-postgresql
   VERTEX_DB_PORT: {{ .Values.postgresql.port | quote }}
 {{- end -}}

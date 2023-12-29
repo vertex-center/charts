@@ -2,7 +2,7 @@ containers:
   - name: vertex-containers
     image: ghcr.io/vertex-center/vertex-containers:main
     ports:
-      - in: 30504
+      - in: 8080
         out: 30504
     envFromConfigMap: true
     envFromSecrets: true

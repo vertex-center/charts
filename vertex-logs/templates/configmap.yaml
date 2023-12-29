@@ -1,5 +1,5 @@
 {{- include "common.configmap" (list . "vertex-logs.configmap") -}}
 {{- define "vertex-logs.configmap" -}}
 data:
-  VERTEX_AUTH_ADDR: $AUTH_SERVICE_HOST:$AUTH_SERVICE_PORT
+  VERTEX_AUTH_ADDR: $VERTEX_AUTH_VERTEX_AUTH_SERVICE_HOST:$VERTEX_AUTH_VERTEX_AUTH_SERVICE_PORT
 {{- end -}}
