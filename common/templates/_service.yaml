@@ -5,12 +5,14 @@ metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}-service
   namespace: {{ .Release.Namespace }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ default "ClusterIP" .Values.service.type }}
   selector:
     app: {{ .Chart.Name }}
   ports:
-    - protocol: TCP
-      port: 8080
+    {{- range .Values.service.ports }}
+    - protocol: {{ default "TCP" .protocol }}
+      port: {{ .port }}
+    {{- end }}
 {{- end -}}
 
 {{- define "common.service" -}}

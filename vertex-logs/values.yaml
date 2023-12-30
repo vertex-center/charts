@@ -8,4 +8,5 @@ containers:
 
 service:
   type: LoadBalancer
-  port: 30516
+  ports:
+    - port: 8080

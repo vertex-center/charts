@@ -9,7 +9,8 @@ containers:
 
 service:
   type: LoadBalancer
-  port: 30504
+  ports:
+    - port: 8080
 
 postgresql:
   nameOverride: vertex-containers-postgresql
