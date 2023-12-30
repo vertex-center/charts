@@ -11,6 +11,7 @@ service:
   port: 30502
 
 postgresql:
+  nameOverride: vertex-auth-postgresql
   port: 5432
   auth:
     database: auth

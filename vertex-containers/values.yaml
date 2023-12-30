@@ -12,6 +12,7 @@ service:
   port: 30504
 
 postgresql:
+  nameOverride: vertex-containers-postgresql
   port: 5432
   auth:
     database: containers
