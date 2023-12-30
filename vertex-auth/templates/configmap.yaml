@@ -1,7 +1,7 @@
 {{- include "common.configmap" (list . "vertex-auth.configmap") -}}
 {{- define "vertex-auth.configmap" -}}
 data:
-  VERTEX_LOGS_ADDR: http://{{ .Release.Name }}-vertex-logs-service:8080/api
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:8080/api
   VERTEX_DB_HOST: {{ .Release.Name }}-{{ .Chart.Name }}-postgresql
   VERTEX_DB_PORT: {{ .Values.postgresql.port | quote }}
 {{- end -}}
