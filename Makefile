@@ -1,17 +1,12 @@
+VERTEX_CHARTS := $(shell find . -maxdepth 1 -type d -name 'vertex-*' -exec basename {} \;)
+
 update-all:
 	helm repo update
-	helm dependency update
 	helm dependency update dind --skip-refresh
-	helm dependency update vertex-auth --skip-refresh
-	helm dependency update vertex-logs --skip-refresh
-	helm dependency update vertex-containers --skip-refresh
+	@for chart in $(VERTEX_CHARTS); do helm dependency update $$chart --skip-refresh; done
 
 install-all:
-	helm install vertex-auth vertex-auth
-	helm install vertex-logs vertex-logs
-	helm install vertex-containers vertex-containers
+	@for chart in $(VERTEX_CHARTS); do helm install $$chart $$chart; done
 
 uninstall-all:
-	helm uninstall vertex-auth
-	helm uninstall vertex-logs
-	helm uninstall vertex-containers
+	@for chart in $(VERTEX_CHARTS); do helm uninstall $$chart; done
