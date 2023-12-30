@@ -1,9 +1,9 @@
 {{- include "common.configmap" (list . "vertex-containers.configmap") -}}
 {{- define "vertex-containers.configmap" -}}
 data:
-  VERTEX_LOGS_ADDR: $VERTEX_LOGS_VERTEX_LOGS_SERVICE_HOST:$VERTEX_LOGS_VERTEX_LOGS_SERVICE_PORT
-  VERTEX_AUTH_ADDR: $VERTEX_AUTH_VERTEX_AUTH_SERVICE_HOST:$VERTEX_AUTH_VERTEX_AUTH_SERVICE_PORT
-  VERTEX_CONTAINERS_KERNEL_ADDR: $VERTEX_CONTAINERS_KERNEL_VERTEX_CONTAINERS_KERNEL_SERVICE_HOST:$VERTEX_CONTAINERS_KERNEL_VERTEX_CONTAINERS_KERNEL_SERVICE_PORT
+  VERTEX_LOGS_ADDR: http://{{ .Release.Name }}-vertex-logs-service:8080/api
+  VERTEX_AUTH_ADDR: http://{{ .Release.Name }}-vertex-auth-service:8080/api
+  VERTEX_CONTAINERS_KERNEL_ADDR: http://{{ .Release.Name }}-vertex-containers-kernel-service:8080/api
   VERTEX_DB_HOST: {{ .Release.Name }}-{{ .Chart.Name }}-postgresql
   VERTEX_DB_PORT: {{ .Values.postgresql.port | quote }}
 {{- end -}}
