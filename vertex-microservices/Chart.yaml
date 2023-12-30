@@ -1,0 +1,16 @@
+apiVersion: v2
+name: vertex-containers
+description: A Helm chart that installs all Vertex microservices
+type: application
+version: 0.1.0
+appVersion: "0.0.0"
+dependencies:
+  - name: vertex-auth
+    version: 0.1.0
+    repository: "file://../vertex-auth"
+  - name: vertex-logs
+    version: 0.1.0
+    repository: "file://../vertex-logs"
+  - name: vertex-containers
+    version: 0.1.0
+    repository: "file://../vertex-containers"

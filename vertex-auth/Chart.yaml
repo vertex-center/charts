@@ -10,4 +10,5 @@ dependencies:
     repository: "file://../common"
   - name: postgresql
     version: 13.2.25
+    alias: vertex-auth-postgresql
     repository: https://charts.bitnami.com/bitnami

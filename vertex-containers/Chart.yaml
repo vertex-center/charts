@@ -10,6 +10,7 @@ dependencies:
     repository: "file://../common"
   - name: postgresql
     version: 13.2.25
+    alias: vertex-containers-postgresql
     repository: https://charts.bitnami.com/bitnami
   - name: dind
     version: 0.1.0

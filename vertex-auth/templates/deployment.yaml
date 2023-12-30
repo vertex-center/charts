@@ -1,3 +1,3 @@
-{{- include "common.deployment" (list . "vertex-logs.deployment") -}}
-{{- define "vertex-logs.deployment" -}}
+{{- include "common.deployment" (list . "vertex-auth.deployment") -}}
+{{- define "vertex-auth.deployment" -}}
 {{- end -}}
