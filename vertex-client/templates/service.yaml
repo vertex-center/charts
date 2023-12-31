@@ -1,0 +1,3 @@
+{{- include "common.service" (list . "vertex-client.service") -}}
+{{- define "vertex-client.service" -}}
+{{- end -}}

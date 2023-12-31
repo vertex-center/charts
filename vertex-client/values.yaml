@@ -1,0 +1,12 @@
+containers:
+  - name: vertex-client
+    image: ghcr.io/vertex-center/vertex-client:main
+    ports:
+      - in: 8080
+        out: 30518
+    envFromConfigMap: true
+
+service:
+  type: LoadBalancer
+  ports:
+    - port: 8080

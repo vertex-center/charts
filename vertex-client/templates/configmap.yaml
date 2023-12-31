@@ -1,0 +1,5 @@
+{{- include "common.configmap" (list . "vertex-client.configmap") -}}
+{{- define "vertex-client.configmap" -}}
+data:
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:8080/api
+{{- end -}}
