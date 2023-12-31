@@ -4,7 +4,14 @@ containers:
     ports:
       - in: 8080
         out: 30516
+    volumeMounts:
+      - name: vertex-logs
+        path: /live/logs
     envFromConfigMap: true
+
+volumes:
+  - name: vertex-logs
+    path: /live/logs
 
 service:
   type: LoadBalancer

@@ -15,16 +15,27 @@ spec:
       labels:
         app: {{ .Chart.Name }}
     spec:
+      volumes:
+        {{- range .Values.volumes }}
+        - name: {{ .name }}
+          hostPath:
+            path: {{ .path }}
+        {{- end }}
       containers:
-      {{- range .Values.containers }}
+        {{- range .Values.containers }}
         - name: {{ .name }}
           image: {{ .image }}
+          volumeMounts:
+            {{- range .volumeMounts }}
+            - name: {{ .name }}
+              mountPath: {{ .path }}
+            {{- end }}
           ports:
-          {{- range .ports }}
+            {{- range .ports }}
             - containerPort: {{ .in }}
               hostPort: {{ .out }}
               protocol: {{ default "TCP" .protocol }}
-          {{- end }}
+            {{- end }}
           envFrom:
             {{- if default false .envFromConfigMap }}
             - configMapRef:
@@ -38,7 +49,7 @@ spec:
           imagePullPolicy: Always
           securityContext:
             privileged: {{ default false .privileged }}
-      {{- end }}
+        {{- end }}
 {{- end -}}
 
 {{- define "common.deployment" -}}
