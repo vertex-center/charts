@@ -5,6 +5,7 @@ containers:
       - in: 8080
         out: 30502
     envFromConfigMap: true
+    envFromSecrets: true
 
 service:
   type: LoadBalancer
