@@ -1,0 +1,98 @@
+apiVersion: v1
+entries:
+  common:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-01T12:49:17.756366217Z"
+    description: A Vertex Helm chart template for Kubernetes
+    digest: 7176a5511cf608f7106333febfb3400147c243e48366dd8ebe38280220bbb1ef
+    name: common
+    type: library
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/common-0.1.0/common-0.1.0.tgz
+    version: 0.1.0
+  dind:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-01T12:49:17.872559824Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: Run Docker in Docker in Kubernetes
+    digest: 5930efb01f44fc1cc118e88afa361bca822e3728c85070921678acc158ce9e77
+    name: dind
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/dind-0.1.0/dind-0.1.0.tgz
+    version: 0.1.0
+  vertex-auth:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-01T12:49:18.021220972Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Logs
+    digest: 95156850e37b7e85f8dbd1ffa9e3aac2300912a157c0b4673e663c2e6526fdbb
+    name: vertex-auth
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-auth-0.1.0/vertex-auth-0.1.0.tgz
+    version: 0.1.0
+  vertex-client:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-01T12:49:18.164962002Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex Client
+    digest: 3b34f6cbd6160643acfcfa46433bed77dc0498cfd539249dcc202516126ef4d6
+    name: vertex-client
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-client-0.1.0/vertex-client-0.1.0.tgz
+    version: 0.1.0
+  vertex-containers:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-01T12:49:18.311367826Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    - name: dind
+      repository: file://../dind
+      version: 0.1.0
+    description: A Helm chart for Vertex Containers
+    digest: 7a97f7e2966ba3be890c93204b463558d6409354098a5ca3c181711345cd1cfe
+    name: vertex-containers
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-0.1.0/vertex-containers-0.1.0.tgz
+    version: 0.1.0
+  vertex-logs:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-01T12:49:18.435973929Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex Logs
+    digest: f0a466c579e1005486bc476b799ebac3a20057888a8d62db1dec206f87b6773d
+    name: vertex-logs
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-logs-0.1.0/vertex-logs-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-01T12:49:18.435984919Z"
