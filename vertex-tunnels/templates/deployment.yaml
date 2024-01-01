@@ -1,0 +1,3 @@
+{{- include "common.deployment" (list . "vertex-tunnels.deployment") -}}
+{{- define "vertex-tunnels.deployment" -}}
+{{- end -}}

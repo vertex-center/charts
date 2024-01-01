@@ -1,0 +1,3 @@
+{{- include "common.service" (list . "vertex-tunnels.service") -}}
+{{- define "vertex-tunnels.service" -}}
+{{- end -}}

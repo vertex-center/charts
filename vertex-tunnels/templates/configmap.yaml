@@ -1,0 +1,7 @@
+{{- include "common.configmap" (list . "vertex-tunnels.configmap") -}}
+{{- define "vertex-tunnels.configmap" -}}
+data:
+  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:8080/api
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:8080/api
+  VERTEX_CONTAINERS_ADDR: http://vertex-containers-vertex-containers-service:8080/api
+{{- end -}}
