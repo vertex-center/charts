@@ -1,6 +1,6 @@
 containers:
-  - name: vertex-logs
-    image: ghcr.io/vertex-center/vertex-logs:main
+  - name: vertex-auth
+    image: ghcr.io/vertex-center/vertex-auth:main
     ports:
       - in: 8080
         out: 30502
