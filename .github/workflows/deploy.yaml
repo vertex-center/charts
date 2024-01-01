@@ -9,6 +9,8 @@ jobs:
   deploy:
     name: Deploy Charts
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,10 +27,14 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install dependencies
+        run: |
+          make install-deps
+          make update-charts
+
       - name: Release
         uses: helm/chart-releaser-action@v1.6.0
         with:
           charts_dir: .
-
         env:
           CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
