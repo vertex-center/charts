@@ -1,0 +1,12 @@
+containers:
+  - name: vertex-reverseproxy
+    image: ghcr.io/vertex-center/vertex-reverseproxy:main
+    ports:
+      - in: 8080
+        out: 30508
+    envFromConfigMap: true
+
+service:
+  type: LoadBalancer
+  ports:
+    - port: 8080

@@ -1,0 +1,3 @@
+{{- include "common.service" (list . "vertex-reverseproxy.service") -}}
+{{- define "vertex-reverseproxy.service" -}}
+{{- end -}}

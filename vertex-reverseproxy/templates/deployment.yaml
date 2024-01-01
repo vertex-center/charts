@@ -1,0 +1,3 @@
+{{- include "common.deployment" (list . "vertex-reverseproxy.deployment") -}}
+{{- define "vertex-reverseproxy.deployment" -}}
+{{- end -}}
