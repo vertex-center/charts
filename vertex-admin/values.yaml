@@ -1,0 +1,21 @@
+containers:
+  - name: vertex-admin
+    image: ghcr.io/vertex-center/vertex-admin:main
+    ports:
+      - in: 8080
+        out: 30500
+    envFromConfigMap: true
+    envFromSecrets: true
+
+service:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+
+postgresql:
+  nameOverride: vertex-admin-postgresql
+  port: 5432
+  auth:
+    database: admin
+    username: vertex
+    password: vx-pg-pass

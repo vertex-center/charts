@@ -1,0 +1,13 @@
+apiVersion: v2
+name: vertex-admin
+description: A Helm chart for Vertex Admin
+type: application
+version: 0.1.0
+appVersion: "0.0.0"
+dependencies:
+  - name: common
+    version: 0.1.0
+    repository: "file://../common"
+  - name: postgresql
+    version: 13.2.25
+    repository: https://charts.bitnami.com/bitnami
