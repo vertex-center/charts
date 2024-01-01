@@ -1,0 +1,3 @@
+{{- include "common.deployment" (list . "vertex-monitoring.deployment") -}}
+{{- define "vertex-monitoring.deployment" -}}
+{{- end -}}

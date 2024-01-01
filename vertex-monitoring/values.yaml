@@ -1,0 +1,12 @@
+containers:
+  - name: vertex-monitoring
+    image: ghcr.io/vertex-center/vertex-monitoring:main
+    ports:
+      - in: 8080
+        out: 30506
+    envFromConfigMap: true
+
+service:
+  type: LoadBalancer
+  ports:
+    - port: 8080

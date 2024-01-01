@@ -1,0 +1,3 @@
+{{- include "common.service" (list . "vertex-monitoring.service") -}}
+{{- define "vertex-monitoring.service" -}}
+{{- end -}}
