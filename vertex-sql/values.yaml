@@ -1,0 +1,12 @@
+containers:
+  - name: vertex-sql
+    image: ghcr.io/vertex-center/vertex-sql:main
+    ports:
+      - in: 8080
+        out: 30512
+    envFromConfigMap: true
+
+service:
+  type: LoadBalancer
+  ports:
+    - port: 8080
