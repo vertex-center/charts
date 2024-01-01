@@ -1,0 +1,34 @@
+name: Deploy Charts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Charts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Vertex Nexa Bot
+        run: |
+          git config user.email "149347004+vertex-nexa[bot]@users.noreply.github.com"
+          git config user.name "vertex-nexa[bot]"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release
+        uses: helm/chart-releaser-action@v1.6.0
+        with:
+          charts_dir: .
+
+        env:
+          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
