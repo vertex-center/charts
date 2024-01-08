@@ -26,6 +26,24 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/dind-0.1.0/dind-0.1.0.tgz
     version: 0.1.0
+  vertex-admin:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-08T11:07:13.154696844Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Admin
+    digest: 1436a8e5a9586c02ff79fea25b96501a002ae8bfc98f54e3d4c06329eb2ee168
+    name: vertex-admin
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-admin-0.1.0/vertex-admin-0.1.0.tgz
+    version: 0.1.0
   vertex-auth:
   - apiVersion: v2
     appVersion: 0.0.0
@@ -95,4 +113,64 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-logs-0.1.0/vertex-logs-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-01T12:49:18.435984919Z"
+  vertex-monitoring:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-08T11:07:14.176940304Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex Monitoring
+    digest: 7424a241b5324c9770a99c76f6f6a3104dfc8ec2bd199e7cd7005de95a7dec8c
+    name: vertex-monitoring
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-monitoring-0.1.0/vertex-monitoring-0.1.0.tgz
+    version: 0.1.0
+  vertex-reverseproxy:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-08T11:07:14.364601138Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex Reverse Proxy
+    digest: 71e121542408f42b50fd9f97b454e5f76ef86c325ba05ba5b71bb04b202ed787
+    name: vertex-reverseproxy
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-reverseproxy-0.1.0/vertex-reverseproxy-0.1.0.tgz
+    version: 0.1.0
+  vertex-sql:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-08T11:07:14.542462345Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex SQL
+    digest: 35721f98482fcd04d417c7b98ca6bc6a60d7944e6bbba2bb71e8b64cadeb53a1
+    name: vertex-sql
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-sql-0.1.0/vertex-sql-0.1.0.tgz
+    version: 0.1.0
+  vertex-tunnels:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-08T11:07:14.747686983Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex Tunnels
+    digest: ac8db6c4b5881ff4a7d60878f466f0361143a923c94383181f1bca20093cd8d9
+    name: vertex-tunnels
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-08T11:07:14.747716197Z"
