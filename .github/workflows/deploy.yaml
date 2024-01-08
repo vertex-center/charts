@@ -1,9 +1,6 @@
 name: Deploy Charts
 
-on:
-  push:
-    tags:
-      - v*
+on: workflow_dispatch
 
 jobs:
   deploy:
