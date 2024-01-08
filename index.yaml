@@ -161,6 +161,20 @@ entries:
   vertex-tunnels:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-08T21:23:37.527137511Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Vertex Tunnels
+    digest: 5d49a58939ed019433c557f313246416487e227c4265c8c1ea3b1c290bf72134
+    name: vertex-tunnels
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.1/vertex-tunnels-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-08T11:07:14.747686983Z"
     dependencies:
     - name: common
@@ -173,4 +187,4 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-08T11:07:14.747716197Z"
+generated: "2024-01-08T21:23:37.527151027Z"
