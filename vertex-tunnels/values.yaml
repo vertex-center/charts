@@ -3,7 +3,7 @@ containers:
     image: ghcr.io/vertex-center/vertex-tunnels:main
     ports:
       - in: 8080
-        out: 30512
+        out: 30514
     envFromConfigMap: true
 
 service:
