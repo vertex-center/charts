@@ -10,7 +10,8 @@ containers:
 service:
   type: LoadBalancer
   ports:
-    - port: 8080
+    - port: 7000
+      nodePort: 30500
 
 postgresql:
   nameOverride: vertex-admin-postgresql

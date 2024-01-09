@@ -16,4 +16,5 @@ volumes:
 service:
   type: LoadBalancer
   ports:
-    - port: 8080
+    - port: 7016
+      nodePort: 30516
