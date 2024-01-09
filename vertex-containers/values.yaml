@@ -12,6 +12,7 @@ service:
   ports:
     - port: 7004
       nodePort: 30504
+      targetPort: 8080
 
 postgresql:
   nameOverride: vertex-containers-postgresql

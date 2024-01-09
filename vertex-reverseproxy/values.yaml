@@ -11,3 +11,4 @@ service:
   ports:
     - port: 7008
       nodePort: 30508
+      targetPort: 8080

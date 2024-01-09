@@ -11,3 +11,4 @@ service:
   ports:
     - port: 7012
       nodePort: 30512
+      targetPort: 8080

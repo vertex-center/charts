@@ -12,6 +12,7 @@ service:
   ports:
     - port: 7002
       nodePort: 30502
+      targetPort: 8080
 
 postgresql:
   nameOverride: vertex-auth-postgresql
