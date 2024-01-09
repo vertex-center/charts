@@ -2,9 +2,9 @@ apiVersion: v2
 name: vertex-tunnels
 description: A Helm chart for Vertex Tunnels
 type: application
-version: 0.2.0
+version: 0.3.0
 appVersion: "0.0.0"
 dependencies:
   - name: common
-    version: 0.2.0
+    version: 0.3.0
     repository: "file://../common"
