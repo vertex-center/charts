@@ -1,3 +1,10 @@
 {{- include "common.deployment" (list . "dind.deployment") -}}
 {{- define "dind.deployment" -}}
+spec:
+  template:
+    spec:
+      volumes:
+        - name: {{ .Chart.Name }}-storage
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-{{ .Chart.Name }}-pvc
 {{- end -}}
