@@ -1,5 +1,5 @@
 {{- include "common.configmap" (list . "vertex-logs.configmap") -}}
 {{- define "vertex-logs.configmap" -}}
 data:
-  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:8080/api
+  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
 {{- end -}}

@@ -1,13 +1,13 @@
 {{- include "common.configmap" (list . "vertex-client.configmap") -}}
 {{- define "vertex-client.configmap" -}}
 data:
-  VERTEX_ADMIN_ADDR: http://vertex-admin-vertex-admin-service:8080/api
-  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:8080/api
-  VERTEX_CONTAINERS_ADDR: http://vertex-containers-vertex-containers-service:8080/api
-  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:8080/api
-  VERTEX_MONITORING_ADDR: http://vertex-monitoring-vertex-monitoring-service:8080/api
-  VERTEX_REVERSE_PROXY_ADDR: http://vertex-reverseproxy-vertex-reverseproxy-service:8080/api
+  VERTEX_ADMIN_ADDR: http://vertex-admin-vertex-admin-service:7000/api
+  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
+  VERTEX_CONTAINERS_ADDR: http://vertex-containers-vertex-containers-service:7004/api
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:7016/api
+  VERTEX_MONITORING_ADDR: http://vertex-monitoring-vertex-monitoring-service:7006/api
+  VERTEX_REVERSE_PROXY_ADDR: http://vertex-reverseproxy-vertex-reverseproxy-service:7008/api
   VERTEX_SERVICE_EDITOR_ADDR: http://vertex-serviceeditor-vertex-serviceeditor-service:8080/api
-  VERTEX_SQL_ADDR: http://vertex-sql-vertex-sql-service:8080/api
-  VERTEX_TUNNELS_ADDR: http://vertex-tunnels-vertex-tunnels-service:8080/api
+  VERTEX_SQL_ADDR: http://vertex-sql-vertex-sql-service:7012/api
+  VERTEX_TUNNELS_ADDR: http://vertex-tunnels-vertex-tunnels-service:7014/api
 {{- end -}}

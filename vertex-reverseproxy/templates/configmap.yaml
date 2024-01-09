@@ -1,6 +1,6 @@
 {{- include "common.configmap" (list . "vertex-reverseproxy.configmap") -}}
 {{- define "vertex-reverseproxy.configmap" -}}
 data:
-  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:8080/api
-  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:8080/api
+  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:7016/api
 {{- end -}}
