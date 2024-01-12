@@ -1,12 +1,12 @@
 dependencies:
 - name: common
   repository: file://../common
-  version: 0.3.0
+  version: 0.4.0
 - name: postgresql
   repository: https://charts.bitnami.com/bitnami
   version: 13.2.25
 - name: dind
   repository: file://../dind
-  version: 0.3.0
-digest: sha256:c1c175596c869bf3774e854ff80ffb951f34404ac0d613016dacfa7402c5151a
-generated: "2024-01-09T14:49:05.568087-05:00"
+  version: 0.4.0
+digest: sha256:11880b72478d081810b4ecf0e2ab151336d8bc386a4a03933287b6cae650a421
+generated: "2024-01-12T13:45:04.916488-05:00"
