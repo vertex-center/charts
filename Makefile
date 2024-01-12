@@ -14,6 +14,12 @@ update-charts:
 install-charts:
 	@for chart in $(VERTEX_CHARTS); do \
   		echo "Installing $$chart..."; \
+ 		helm install $$chart $$chart; \
+ 	done
+
+install-charts-with-wait:
+	@for chart in $(VERTEX_CHARTS); do \
+  		echo "Installing $$chart..."; \
  		helm install $$chart $$chart --wait; \
  	done
 
