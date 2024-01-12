@@ -6,6 +6,10 @@ containers:
         out: 30508
     envFromConfigMap: true
 
+configmap:
+  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:7016/api
+
 service:
   type: LoadBalancer
   ports:

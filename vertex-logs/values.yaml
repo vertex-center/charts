@@ -13,6 +13,9 @@ volumes:
   - name: vertex-logs
     path: /live/logs
 
+configmap:
+  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
+
 service:
   type: LoadBalancer
   ports:

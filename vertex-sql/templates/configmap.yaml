@@ -1,7 +1,3 @@
 {{- include "common.configmap" (list . "vertex-sql.configmap") -}}
 {{- define "vertex-sql.configmap" -}}
-data:
-  VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
-  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:7016/api
-  VERTEX_CONTAINERS_ADDR: http://vertex-containers-vertex-containers-service:7004/api
 {{- end -}}
