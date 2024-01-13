@@ -382,6 +382,23 @@ entries:
   vertex-containers:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:52:21.763644792Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Containers
+    digest: d7fde3fa5c10f17c9a64496eb8bd1429ed25604ea57a2289d2c56c7965570b70
+    name: vertex-containers
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-0.5.2/vertex-containers-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-13T14:44:13.63568473Z"
     dependencies:
     - name: common
@@ -515,6 +532,23 @@ entries:
     - https://github.com/vertex-center/charts/releases/download/vertex-containers-0.1.0/vertex-containers-0.1.0.tgz
     version: 0.1.0
   vertex-containers-kernel:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:52:21.950890115Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: dind
+      repository: file://../dind
+      version: 0.5.0
+    description: A Helm chart for Vertex Containers Kernel
+    digest: b88125352dc6305ad380e7736ce5029c95689d333fe316749b689f893ab0c2ab
+    name: vertex-containers-kernel
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-kernel-0.5.3/vertex-containers-kernel-0.5.3.tgz
+    version: 0.5.3
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2024-01-13T14:39:13.23153623Z"
@@ -918,4 +952,4 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-13T14:44:13.635843346Z"
+generated: "2024-01-13T14:52:21.950993528Z"
