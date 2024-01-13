@@ -17,7 +17,7 @@ service:
 configmap:
   VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:7016/api
   VERTEX_AUTH_ADDR: http://vertex-auth-vertex-auth-service:7002/api
-  VERTEX_CONTAINERS_KERNEL_ADDR: http://vertex-containers-kernel-vertex-containers-kernel-service:7005/api
+  VERTEX_CONTAINERS_KERNEL_ADDR: http://vertex-containers-k-vertex-containers-k-service:7005/api
 
 postgresql:
   nameOverride: vertex-containers-postgresql
