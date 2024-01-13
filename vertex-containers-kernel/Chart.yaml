@@ -2,12 +2,12 @@ apiVersion: v2
 name: vertex-containers
 description: A Helm chart for Vertex Containers
 type: application
-version: 0.4.0
+version: 0.5.0
 appVersion: "0.0.0"
 dependencies:
   - name: common
-    version: 0.4.0
+    version: 0.5.0
     repository: "file://../common"
   - name: dind
-    version: 0.4.0
+    version: 0.5.0
     repository: "file://../dind"
