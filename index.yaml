@@ -382,6 +382,23 @@ entries:
   vertex-containers:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:44:13.63568473Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Containers
+    digest: f843d46791d6ed61597de797f4fcf1775c16d559a8806377aceacd4d4ac3b1d1
+    name: vertex-containers
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-0.5.1/vertex-containers-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-13T14:27:32.931067327Z"
     dependencies:
     - name: common
@@ -901,4 +918,4 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-13T14:39:13.231649402Z"
+generated: "2024-01-13T14:44:13.635843346Z"
