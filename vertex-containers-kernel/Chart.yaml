@@ -8,6 +8,6 @@ dependencies:
   - name: common
     version: 0.4.0
     repository: "file://../common"
-  - name: postgresql
-    version: 13.2.25
-    repository: https://charts.bitnami.com/bitnami
+  - name: dind
+    version: 0.4.0
+    repository: "file://../dind"

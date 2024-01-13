@@ -1,0 +1,18 @@
+containers:
+  - name: vertex-containers
+    image: ghcr.io/vertex-center/vertex-containers-kernel:main
+    ports:
+      - in: 8080
+        out: 30505
+    envFromConfigMap: true
+    envFromSecrets: true
+
+service:
+  type: LoadBalancer
+  ports:
+    - port: 7005
+      nodePort: 30505
+      targetPort: 8080
+
+configmap:
+  VERTEX_LOGS_ADDR: http://vertex-logs-vertex-logs-service:7016/api

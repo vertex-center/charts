@@ -1,0 +1,9 @@
+dependencies:
+- name: common
+  repository: file://../common
+  version: 0.4.0
+- name: dind
+  repository: file://../dind
+  version: 0.4.0
+digest: sha256:3599f10eb4ea22179233067308363cc121b7415fc4eeb0524fbb6c610a2928eb
+generated: "2024-01-13T09:24:06.90577-05:00"

@@ -1,0 +1,3 @@
+{{- include "common.configmap" (list . "vertex-containers.configmap") -}}
+{{- define "vertex-containers.configmap" -}}
+{{- end -}}

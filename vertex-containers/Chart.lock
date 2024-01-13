@@ -5,8 +5,5 @@ dependencies:
 - name: postgresql
   repository: https://charts.bitnami.com/bitnami
   version: 13.2.25
-- name: dind
-  repository: file://../dind
-  version: 0.4.0
-digest: sha256:11880b72478d081810b4ecf0e2ab151336d8bc386a4a03933287b6cae650a421
-generated: "2024-01-12T13:45:04.916488-05:00"
+digest: sha256:140ac5da7fbdeba91131dc8f3f41edcd3e8961393fa1914dc62097de58ed2041
+generated: "2024-01-13T09:24:09.160611-05:00"
