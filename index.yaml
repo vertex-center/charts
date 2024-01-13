@@ -531,6 +531,24 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-containers-0.1.0/vertex-containers-0.1.0.tgz
     version: 0.1.0
+  vertex-containers-k:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:56:37.684550124Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: dind
+      repository: file://../dind
+      version: 0.5.0
+    description: A Helm chart for Vertex Containers Kernel
+    digest: 8d753c650e163f20940a8b5950d47ce0a3ac8d90e7e51f326b8dfae32329bfee
+    name: vertex-containers-k
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-k-0.5.4/vertex-containers-k-0.5.4.tgz
+    version: 0.5.4
   vertex-containers-kernel:
   - apiVersion: v2
     appVersion: 0.0.0
@@ -952,4 +970,4 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-13T14:52:21.950993528Z"
+generated: "2024-01-13T14:56:37.684665409Z"
