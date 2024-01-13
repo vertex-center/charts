@@ -1,3 +1,3 @@
-{{- include "common.service" (list . "vertex-containers-kernel.service") -}}
-{{- define "vertex-containers-kernel.service" -}}
+{{- include "common.service" (list . "vertex-containers-k.service") -}}
+{{- define "vertex-containers-k.service" -}}
 {{- end -}}

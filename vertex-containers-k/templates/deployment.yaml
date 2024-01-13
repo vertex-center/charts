@@ -1,3 +1,3 @@
-{{- include "common.deployment" (list . "vertex-containers-kernel.deployment") -}}
-{{- define "vertex-containers-kernel.deployment" -}}
+{{- include "common.deployment" (list . "vertex-containers-k.deployment") -}}
+{{- define "vertex-containers-k.deployment" -}}
 {{- end -}}
