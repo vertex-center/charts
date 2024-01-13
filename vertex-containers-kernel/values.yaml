@@ -1,5 +1,5 @@
 containers:
-  - name: vertex-containers
+  - name: vertex-containers-kernel
     image: ghcr.io/vertex-center/vertex-containers-kernel:main
     ports:
       - in: 8080
