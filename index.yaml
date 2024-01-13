@@ -3,6 +3,16 @@ entries:
   common:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:27:32.269340744Z"
+    description: A Vertex Helm chart template for Kubernetes
+    digest: 49c3b8861177b2c959011f2acab9b47c29a26cc2a6a29df7be80fe0f58d3d854
+    name: common
+    type: library
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/common-0.5.0/common-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-12T18:46:38.487262267Z"
     description: A Vertex Helm chart template for Kubernetes
     digest: 4de32c015f9a51b1e9148890907f722c9f2b3dadf1291c20dc02d750beaaf090
@@ -42,6 +52,20 @@ entries:
     - https://github.com/vertex-center/charts/releases/download/common-0.1.0/common-0.1.0.tgz
     version: 0.1.0
   dind:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:27:32.3922782Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: Run Docker in Docker in Kubernetes
+    digest: b53431fb174bb6c69d0fcd038a352efbf794c946416471840174c079e25e7361
+    name: dind
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/dind-0.5.0/dind-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2024-01-12T18:46:38.618538894Z"
@@ -115,6 +139,23 @@ entries:
   vertex-admin:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:27:32.523882368Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Admin
+    digest: 6e6caee93ef29829e3dcb6ae8f2b6a4cfd840d97509ae1f2dcc7ae535617e632
+    name: vertex-admin
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-admin-0.5.0/vertex-admin-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-12T18:46:38.763848225Z"
     dependencies:
     - name: common
@@ -182,6 +223,23 @@ entries:
     - https://github.com/vertex-center/charts/releases/download/vertex-admin-0.1.0/vertex-admin-0.1.0.tgz
     version: 0.1.0
   vertex-auth:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:27:32.655185282Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Logs
+    digest: fda375ea1b7205262acf6960ef970977a2f5c9002a73e5e31dd24acbc5873ae7
+    name: vertex-auth
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-auth-0.5.0/vertex-auth-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2024-01-12T18:46:38.891348306Z"
@@ -253,6 +311,20 @@ entries:
   vertex-client:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:27:32.773306514Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: A Helm chart for Vertex Client
+    digest: 2aa09ab7b086545219bf1e06614ba31a04aefd53b98c39478cf67e6c7ca2c0c4
+    name: vertex-client
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-client-0.5.0/vertex-client-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-12T18:46:39.064242436Z"
     dependencies:
     - name: common
@@ -308,6 +380,23 @@ entries:
     - https://github.com/vertex-center/charts/releases/download/vertex-client-0.1.0/vertex-client-0.1.0.tgz
     version: 0.1.0
   vertex-containers:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:27:32.931067327Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.25
+    description: A Helm chart for Vertex Containers
+    digest: 28a68db406ccaa3079652b58105a2e0bbb01a3f856f4f44328a0e85e0474f9a7
+    name: vertex-containers
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-0.5.0/vertex-containers-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2024-01-12T18:46:39.197264984Z"
@@ -411,6 +500,20 @@ entries:
   vertex-logs:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:27:33.119229658Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: A Helm chart for Vertex Logs
+    digest: 323fe42d5109e63dc240561e42ad43aef0b498ecce98338bbb7cc1a06d187519
+    name: vertex-logs
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-logs-0.5.0/vertex-logs-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-12T18:46:39.30973378Z"
     dependencies:
     - name: common
@@ -466,6 +569,20 @@ entries:
     - https://github.com/vertex-center/charts/releases/download/vertex-logs-0.1.0/vertex-logs-0.1.0.tgz
     version: 0.1.0
   vertex-monitoring:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:27:33.258318075Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: A Helm chart for Vertex Monitoring
+    digest: c6d663d28621715c47b9830e2ba86379389b8902f5a2e24d3e94f6c5ab9d7ca6
+    name: vertex-monitoring
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-monitoring-0.5.0/vertex-monitoring-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2024-01-12T18:46:39.447138444Z"
@@ -525,6 +642,20 @@ entries:
   vertex-reverseproxy:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:27:33.394958278Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: A Helm chart for Vertex Reverse Proxy
+    digest: f58cd29a78509fa18a6d0b4007c7a8a79cc9198f389ae0b6ee935563a42f6152
+    name: vertex-reverseproxy
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-reverseproxy-0.5.0/vertex-reverseproxy-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-12T18:46:39.577244392Z"
     dependencies:
     - name: common
@@ -582,6 +713,20 @@ entries:
   vertex-sql:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-13T14:27:33.55381409Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: A Helm chart for Vertex SQL
+    digest: 1f17478b6bcfa0bfacb0faf5a09c0915a1c7daa28849cac44168ed2b7a814a69
+    name: vertex-sql
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-sql-0.5.0/vertex-sql-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-12T18:46:39.687074887Z"
     dependencies:
     - name: common
@@ -637,6 +782,20 @@ entries:
     - https://github.com/vertex-center/charts/releases/download/vertex-sql-0.1.0/vertex-sql-0.1.0.tgz
     version: 0.1.0
   vertex-tunnels:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-01-13T14:27:33.677664053Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.5.0
+    description: A Helm chart for Vertex Tunnels
+    digest: e5ef5a64d13249cc7374962a7f4827e807d70e138338f170ace81600dd9612be
+    name: vertex-tunnels
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.5.0/vertex-tunnels-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2024-01-12T18:46:39.823202872Z"
@@ -707,4 +866,4 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-12T18:46:39.823392536Z"
+generated: "2024-01-13T14:27:33.677815905Z"
