@@ -4,7 +4,14 @@ containers:
     ports:
       - in: 8080
         out: 30505
+    volumeMounts:
+      - name: docker-socket
+        path: /var/run/docker.sock
     envFromConfigMap: true
+
+volumes:
+  - name: docker-socket
+    path: /var/run/docker.sock
 
 service:
   type: LoadBalancer
