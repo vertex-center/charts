@@ -623,6 +623,20 @@ entries:
   vertex-containers-k:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2024-01-14T08:15:45.802726779Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.6.0
+    description: A Helm chart for Vertex Containers Kernel
+    digest: dc2e3b9cfc8a19a5e80c70fc5fc9ea736e29bdbe9fa703de3d970fc9137fa671
+    name: vertex-containers-k
+    type: application
+    urls:
+    - https://github.com/vertex-center/charts/releases/download/vertex-containers-k-0.6.1/vertex-containers-k-0.6.1.tgz
+    version: 0.6.1
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2024-01-13T15:23:22.672539102Z"
     dependencies:
     - name: common
@@ -1146,4 +1160,4 @@ entries:
     urls:
     - https://github.com/vertex-center/charts/releases/download/vertex-tunnels-0.1.0/vertex-tunnels-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-13T15:23:23.306803442Z"
+generated: "2024-01-14T08:15:46.415573105Z"
