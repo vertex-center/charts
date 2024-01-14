@@ -2,7 +2,7 @@ apiVersion: v2
 name: vertex-containers-k
 description: A Helm chart for Vertex Containers Kernel
 type: application
-version: 0.6.0
+version: 0.6.1
 appVersion: "0.0.0"
 dependencies:
   - name: common
